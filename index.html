@@ -158,22 +158,44 @@
     .btn-primary:hover .arrow { transform: translateX(4px); }
 
     .btn-neon {
-      border: 1px solid rgba(255, 247, 240, 0.72);
-      animation: neon-blink 4s ease-in-out infinite;
+      position: relative;
+      isolation: isolate;
     }
-    .btn-neon:hover { animation-play-state: paused; }
 
-    @keyframes neon-blink {
+    .btn-neon::before {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border: 2px solid rgba(255, 255, 255, 0.92);
+      border-radius: inherit;
+      pointer-events: none;
+      opacity: 0.42;
+      box-shadow:
+        0 0 7px rgba(255, 255, 255, 0.50),
+        0 0 14px rgba(199, 166, 226, 0.46),
+        0 0 22px rgba(246, 177, 122, 0.28);
+      animation: neon-outline 5.5s ease-in-out infinite;
+    }
+
+    .btn-neon:hover::before { animation-play-state: paused; }
+
+    @keyframes neon-outline {
       0%, 100% {
+        opacity: 0.42;
+        border-color: rgba(255, 255, 255, 0.82);
         box-shadow:
-          0 6px 22px rgba(246, 177, 122, 0.28),
-          0 0 0 1.5px rgba(243, 236, 227, 0.32);
+          0 0 6px rgba(255, 255, 255, 0.42),
+          0 0 13px rgba(199, 166, 226, 0.42),
+          0 0 20px rgba(246, 177, 122, 0.24);
       }
-      50% {
+      45%, 55% {
+        opacity: 1;
+        border-color: #ffffff;
         box-shadow:
-          0 6px 26px rgba(246, 177, 122, 0.42),
-          0 0 0 3px rgba(255, 247, 240, 0.98),
-          0 0 26px 7px rgba(246, 177, 122, 0.8);
+          0 0 8px 2px rgba(255, 255, 255, 0.98),
+          0 0 18px 5px rgba(199, 166, 226, 0.90),
+          0 0 34px 9px rgba(199, 166, 226, 0.62),
+          0 0 48px 12px rgba(246, 177, 122, 0.34);
       }
     }
 
@@ -558,11 +580,12 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .blob { animation: none; }
-      .btn-neon {
+      .btn-neon::before {
         animation: none;
+        opacity: 0.9;
         box-shadow:
-          0 6px 22px rgba(246, 177, 122, 0.28),
-          0 0 0 2px rgba(255, 247, 240, 0.9);
+          0 0 8px 2px rgba(255, 255, 255, 0.88),
+          0 0 20px 5px rgba(199, 166, 226, 0.72);
       }
       .q {
         transition: none;
