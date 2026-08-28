@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encuentro 18.09.2026 · Altas Capacidades en Buenos Aires</title>
+  <meta name="description" content="Un encuentro para conocer de qué se trata: acercarte, hacer preguntas y escuchar a quienes ya transitaron este camino." />
+  <meta property="og:title" content="Encuentro 18.09.2026 · Altas Capacidades en Buenos Aires" />
+  <meta property="og:description" content="Un encuentro para conocer de qué se trata: acercarte, hacer preguntas y escuchar a quienes ya transitaron este camino." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1b1426;
+      --ink-2: #241834;
+      --panel: #2c1f3f;
+      --cream: #f3ece3;
+      --cream-dim: rgba(243, 236, 227, 0.64);
+      --cream-faint: rgba(243, 236, 227, 0.5);
+      --amber: #f6b17a;
+      --coral: #ee7b6b;
+      --orchid: #c7a6e2;
+      --line: rgba(243, 236, 227, 0.14);
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+    body {
+      background: var(--ink);
+      color: var(--cream);
+      font-family: "Spline Sans", system-ui, sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+    .aurora { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.55; mix-blend-mode: screen; }
+    .blob.a { width: 46vw; height: 46vw; background: radial-gradient(circle at 30% 30%, var(--amber), transparent 70%); top: -12vw; left: -8vw; animation: drift1 26s ease-in-out infinite; }
+    .blob.b { width: 42vw; height: 42vw; background: radial-gradient(circle at 50% 50%, var(--orchid), transparent 70%); top: 8vh; right: -12vw; animation: drift2 32s ease-in-out infinite; }
+    .blob.c { width: 38vw; height: 38vw; background: radial-gradient(circle at 50% 50%, var(--coral), transparent 72%); bottom: -14vw; left: 18vw; opacity: 0.4; animation: drift3 38s ease-in-out infinite; }
+    @keyframes drift1 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(6vw, 5vh) scale(1.12); } }
+    @keyframes drift2 { 0%, 100% { transform: translate(0, 0) scale(1.05); } 50% { transform: translate(-5vw, 7vh) scale(0.92); } }
+    @keyframes drift3 { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(4vw, -6vh) scale(1.1); } }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .btn { font-family: "Spline Sans", sans-serif; font-size: 14px; font-weight: 500; border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 9px; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+    .btn-primary { background: var(--amber); color: #2a1606; padding: 11px 20px; border-radius: 999px; box-shadow: 0 6px 22px rgba(246,177,122,.28); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(246,177,122,.4); }
+    .btn-primary .arrow { transition: transform .25s ease; }
+    .btn-primary:hover .arrow { transform: translateX(4px); }
+    .btn-neon { animation: neon-blink 1.5s ease-in-out infinite; }
+    .btn-neon:hover { animation-play-state: paused; }
+    @keyframes neon-blink {
+      0%,100% { box-shadow: 0 6px 22px rgba(246,177,122,.28), 0 0 0 1.5px rgba(243,236,227,.32); }
+      50% { box-shadow: 0 6px 26px rgba(246,177,122,.42), 0 0 0 3px rgba(255,247,240,.98), 0 0 26px 7px rgba(246,177,122,.8); }
+    }
+    .hero { position: relative; z-index: 1; padding: 88px 0 96px; }
+    .eyebrow { font-size: 12.5px; letter-spacing: .26em; text-transform: uppercase; color: var(--amber); display: flex; align-items: center; gap: 14px; margin-bottom: 30px; }
+    .eyebrow .rule { height: 1px; width: 46px; background: var(--amber); opacity: .5; }
+    h1 { font-family: "Fraunces", serif; font-weight: 500; font-size: clamp(46px, 9.2vw, 116px); line-height: .98; letter-spacing: -.015em; }
+    h1 .soft { display: block; font-style: italic; font-weight: 400; color: var(--orchid); font-size: clamp(26px, 5vw, 58px); letter-spacing: 0; margin-top: .18em; }
+    .meta { margin-top: 42px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px 30px; }
+    .date { font-family: "Fraunces", serif; font-size: clamp(30px, 5vw, 46px); font-weight: 500; letter-spacing: .02em; }
+    .date .sep { color: var(--coral); }
+    .place { font-size: 15px; letter-spacing: .04em; color: var(--cream-dim); text-transform: uppercase; }
+    .lede { margin-top: 34px; max-width: 48ch; font-size: clamp(17px, 2.4vw, 21px); color: var(--cream-dim); }
+    .hero-cta { margin-top: 38px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .questions { position: relative; z-index: 1; padding: 40px 0 56px; }
+    .q-head { font-family: "Fraunces", serif; font-style: italic; font-size: clamp(20px,3vw,28px); color: var(--cream); margin-bottom: 36px; max-width: 30ch; }
+    .q-list { display: flex; flex-direction: column; }
+    .q { border-top: 1px solid var(--line); padding: 30px 0; display: grid; grid-template-columns: 46px 1fr; gap: 8px 22px; align-items: start; opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .q:last-child { border-bottom: 1px solid var(--line); }
+    .q.in { opacity: 1; transform: none; }
+    .q .mark { font-family: "Fraunces", serif; font-size: 34px; line-height: 1; color: var(--amber); font-style: italic; }
+    .q p { font-family: "Fraunces", serif; font-weight: 400; font-size: clamp(23px,4vw,38px); line-height: 1.18; letter-spacing: -.01em; transition: color .3s ease; }
+    .q:hover p { color: var(--amber); }
+    .detail { position: relative; z-index: 1; margin: 48px 0; background: linear-gradient(135deg,var(--ink-2),var(--panel)); border: 1px solid var(--line); border-radius: 26px; padding: 46px clamp(28px,5vw,56px); display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 34px; }
+    .detail .cell .k, .logos .k { font-size: 12px; font-weight: 400; letter-spacing: .22em; text-transform: uppercase; color: var(--orchid); }
+    .detail .cell .k { margin-bottom: 12px; }
+    .detail .cell .v { font-family: "Fraunces", serif; font-size: clamp(20px,2.6vw,26px); font-weight: 500; line-height: 1.25; }
+    .detail .cell .v small { display: block; font-family: "Spline Sans", sans-serif; font-size: 14px; font-weight: 400; color: var(--cream-dim); margin-top: 6px; }
+    .detail .cell .v small a { color: var(--amber); text-decoration: underline; text-underline-offset: 3px; transition: color .2s ease; }
+    .detail .cell .v small a:hover { color: var(--cream); }
+    .logos { position: relative; z-index: 1; padding: 10px 0 50px; }
+    .logos .k { margin-bottom: 24px; text-align: center; }
+    .logos-row { display: flex; align-items: stretch; justify-content: center; border: 1px solid var(--line); border-radius: 26px; overflow: hidden; background: rgba(243,236,227,.03); }
+    .logo-cell { flex: 1 1 50%; max-width: 50%; min-height: 160px; padding: 36px 28px; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .logo-cell + .logo-cell { border-left: 1px solid var(--line); }
+    .wordmark { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.05; }
+    .wordmark.trampolin { font-family: "Fraunces", serif; font-size: clamp(31px,4vw,45px); font-style: italic; color: var(--cream); }
+    .wordmark.ac { font-family: "Spline Sans", sans-serif; font-size: clamp(22px,3vw,34px); font-weight: 600; letter-spacing: -.02em; color: var(--cream); }
+    .wordmark.ac span { margin-top: 7px; color: var(--orchid); font-family: "Fraunces", serif; font-size: .78em; font-style: italic; font-weight: 400; letter-spacing: 0; }
+    .close { position: relative; z-index: 1; text-align: center; padding: 70px 0 40px; }
+    .close .invite { font-family: "Fraunces", serif; font-style: italic; font-weight: 400; font-size: clamp(38px,8vw,82px); line-height: 1; margin-bottom: 26px; }
+    .close p { color: var(--cream-dim); font-size: 17px; max-width: 38ch; margin: 0 auto 32px; }
+    .signup { margin-bottom: 34px; }
+    .close p.alt { font-size: 14px; color: var(--cream-faint); margin-bottom: 14px; }
+    .mailpill { display: inline-flex; align-items: center; gap: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 10px 12px 10px 22px; font-size: 15px; background: rgba(243,236,227,.03); }
+    .mailpill .addr { color: var(--cream); letter-spacing: .01em; }
+    .mailpill .go { background: var(--cream); color: var(--ink); border-radius: 999px; padding: 9px 16px; font-weight: 500; font-size: 13.5px; text-decoration: none; transition: transform .2s ease; }
+    .mailpill .go:hover { transform: translateY(-2px); }
+    footer { position: relative; z-index: 1; border-top: 1px solid var(--line); margin-top: 60px; padding: 38px 0 50px; }
+    .foot-inner { display: flex; justify-content: center; align-items: center; font-size: 13px; color: var(--cream-faint); }
+    .built { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; font-size: 12px; color: var(--cream-faint); }
+    .built-by { display: inline-flex; align-items: center; color: var(--cream-dim); text-decoration: none; transition: color .2s ease; }
+    .built-by:hover { color: var(--cream); }
+    @media (max-width: 560px) {
+      .hero { padding: 64px 0 70px; }
+      .q { grid-template-columns: 34px 1fr; gap: 6px 16px; }
+      .q .mark { font-size: 26px; }
+      .logos-row { flex-direction: column; border: none; }
+      .logo-cell { max-width: 100%; flex: 1 1 100%; border: 1px solid var(--line); border-radius: 22px; }
+      .logo-cell + .logo-cell { border-left: 1px solid var(--line); margin-top: 14px; }
+    }
+    @media (max-width: 420px) {
+      .mailpill { flex-direction: column; border-radius: 22px; padding: 18px; gap: 14px; }
+    }
+    a:focus-visible, .btn:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .blob { animation: none; }
+      .btn-neon { animation: none; box-shadow: 0 6px 22px rgba(246,177,122,.28), 0 0 0 2px rgba(255,247,240,.9); }
+      .q { transition: none; opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <div class="blob a"></div>
+    <div class="blob b"></div>
+    <div class="blob c"></div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow"><span class="rule"></span>Encuentro presencial · CABA</div>
+        <h1>Altas Capacidades<span class="soft">en Buenos Aires</span></h1>
+        <div class="meta">
+          <div class="date">18<span class="sep">.</span>09<span class="sep">.</span>2026</div>
+          <div class="place">Viernes · 18 a 20 hs · Buenos Aires, CABA</div>
+        </div>
+        <p class="lede">Un encuentro para conocer de qué se trata: acercarte, hacer preguntas y escuchar a quienes ya transitaron este camino.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-neon" href="https://docs.google.com/forms/d/1zV179VqaZ01_lo_v2E9i_btaEzJEbqC7Ka_0C_fOl90/viewform" target="_blank" rel="noopener noreferrer">Reservá tu lugar <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="questions" aria-label="Para quién es este encuentro">
+      <div class="wrap">
+        <p class="q-head">Si alguna de estas preguntas te resuena, este espacio es para vos.</p>
+        <div class="q-list">
+          <div class="q"><span class="mark" aria-hidden="true">¿</span><p>¿Tenés sospechas de tener Altas Capacidades?</p></div>
+          <div class="q"><span class="mark" aria-hidden="true">¿</span><p>¿Pensás demasiado? ¿Sentís demasiado?</p></div>
+          <div class="q"><span class="mark" aria-hidden="true">¿</span><p>¿Te aburrís fácil o te cuesta encajar?</p></div>
+          <div class="q"><span class="mark" aria-hidden="true">¿</span><p>¿Te dijeron alguna vez que eras “intenso/a”?</p></div>
+          <div class="q"><span class="mark" aria-hidden="true">¿</span><p>¿Querés acercarte a escuchar experiencias?</p></div>
+          <div class="q"><span class="mark" aria-hidden="true">¿</span><p>¿Querés saber qué rol juegan las emociones?</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <h2 id="detalles-title" class="sr-only">Detalles del encuentro</h2>
+      <section class="detail" aria-labelledby="detalles-title">
+        <div class="cell"><h3 class="k">Fecha</h3><div class="v">18 de septiembre, 2026<small>Viernes · 18 a 20 hs</small></div></div>
+        <div class="cell"><h3 class="k">Lugar</h3><div class="v">El Obrador, Centro Creativo<small>Bartolomé Mitre 1670, CABA · <a href="https://maps.app.goo.gl/cqdqh9nfDcLuQZwC9?g_st=ac" target="_blank" rel="noopener noreferrer">Ver mapa</a></small></div></div>
+        <div class="cell"><h3 class="k">Horario</h3><div class="v">18 a 20 hs<small>Te esperamos puntual</small></div></div>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section class="logos" aria-labelledby="organizan-title">
+        <h2 class="k" id="organizan-title">Organizan</h2>
+        <div class="logos-row">
+          <div class="logo-cell" aria-label="El Trampolín"><div class="wordmark trampolin">El Trampolín</div></div>
+          <div class="logo-cell" aria-label="Altas Capacidades Buenos Aires"><div class="wordmark ac">Altas Capacidades<span>Buenos Aires</span></div></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="close" id="entradas">
+      <div class="wrap">
+        <h2 class="invite">¡Te esperamos!</h2>
+        <p>Reservá tu lugar en el encuentro. Los cupos se asignan por orden de contacto.</p>
+        <div class="signup">
+          <a class="btn btn-primary btn-neon" href="https://docs.google.com/forms/d/1zV179VqaZ01_lo_v2E9i_btaEzJEbqC7Ka_0C_fOl90/viewform" target="_blank" rel="noopener noreferrer">Reservá tu lugar <span class="arrow">→</span></a>
+        </div>
+        <p class="alt">¿Tenés dudas antes de anotarte? Escribinos.</p>
+        <div class="mailpill">
+          <span class="addr">altascapacidades.ba@gmail.com</span>
+          <a class="go" href="mailto:altascapacidades.ba@gmail.com?subject=Entradas%20-%20Altas%20Capacidades%20en%20Buenos%20Aires&body=Hola%2C%20me%20gustar%C3%ADa%20conseguir%20entradas%20para%20el%20encuentro%20del%2018.09.2026.">Escribir</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot-inner">
+      <p class="built"><span>Sitio desarrollado por</span><a class="built-by" href="https://www.neticware.com.ar" target="_blank" rel="noopener noreferrer">Neticware</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const questions = document.querySelectorAll('.q');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transitionDelay = `${entry.target.dataset.delay || 0}ms`;
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+      questions.forEach((question, index) => {
+        question.dataset.delay = index * 120;
+        observer.observe(question);
+      });
+    } else {
+      questions.forEach((question) => question.classList.add('in'));
+    }
+  </script>
+</body>
+</html>
