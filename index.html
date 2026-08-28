@@ -157,7 +157,10 @@
     .btn-primary .arrow { transition: transform 0.25s ease; }
     .btn-primary:hover .arrow { transform: translateX(4px); }
 
-    .btn-neon { animation: neon-blink 1.5s ease-in-out infinite; }
+    .btn-neon {
+      border: 1px solid rgba(255, 247, 240, 0.72);
+      animation: neon-blink 4s ease-in-out infinite;
+    }
     .btn-neon:hover { animation-play-state: paused; }
 
     @keyframes neon-blink {
